@@ -28,16 +28,17 @@ export default function UploadForm({ setSop }) {
   };
 
   return (
-    <div className="flex flex-col items-center space-y-4">
+    <div className="flex flex-col items-center space-y-4 mb-8">
       <input
         type="file"
         accept="video/*"
         onChange={(e) => setFile(e.target.files[0])}
+        className="border rounded p-2 w-full"
       />
-      <button 
+      <button
         onClick={handleSubmit}
         disabled={loading}
-        className="p-2 bg-blue-600 text-white rounded-md"
+        className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded w-full"
       >
         {loading ? "Processing..." : "Upload & Generate SOP"}
       </button>
